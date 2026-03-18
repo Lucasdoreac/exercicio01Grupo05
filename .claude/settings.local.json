@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/ludoc/Desktop/PDMApp -not -path */bin/* -not -path */obj/* -not -path */.vs/* -type f)",
+      "mcp__notebooklm-mcp__notebook_list",
+      "mcp__notebooklm-mcp__notebook_query",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet run:*)",
+      "Bash(dotnet clean:*)",
+      "Bash(echo 'pasta nao encontrada, buscando...' find /c/Users/ludoc/Desktop/PDMApp/PDMApp/obj -name *exercicio* -o -name *novoicone* -o -name *splash*)",
+      "Bash(start \"\" \"/c/Users/ludoc/Desktop/PDMApp/PDMApp/bin/Debug/net10.0-windows10.0.19041.0/win-x64/PDMApp.exe\")",
+      "Bash(powershell -Command \"\nAdd-Type -AssemblyName System.Windows.Forms, System.Drawing\n\\\\$screen = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds\n\\\\$bmp = New-Object System.Drawing.Bitmap\\(\\\\$screen.Width, \\\\$screen.Height\\)\n\\\\$g = [System.Drawing.Graphics]::FromImage\\(\\\\$bmp\\)\n\\\\$g.CopyFromScreen\\(\\\\$screen.Location, [System.Drawing.Point]::Empty, \\\\$screen.Size\\)\n\\\\$bmp.Save\\('C:\\\\Users\\\\ludoc\\\\Desktop\\\\PDMApp\\\\debug_screen.png'\\)\n\\\\$g.Dispose\\(\\); \\\\$bmp.Dispose\\(\\)\nWrite-Host 'Screenshot salvo'\n\")",
+      "Bash(powershell -Command \"Get-Process | Where-Object { \\\\$_.ProcessName -match 'PDMApp|Exercicio|maui' -or \\\\$_.MainWindowTitle -match 'Exercicio' } | Select-Object ProcessName, Id, MainWindowTitle, CPU\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ludoc\\\\Desktop\\\\PDMApp\\\\screenshot_app.ps1\" 2>&1)",
+      "Bash(powershell.exe -Command \"Stop-Process -Id 8008 -Force\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ludoc\\\\Desktop\\\\PDMApp\\\\screenshot_app.ps1\")",
+      "Bash(powershell.exe -Command \"Get-Process PDMApp -ErrorAction SilentlyContinue | Select-Object Id, ProcessName\" 2>&1)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ludoc\\\\Desktop\\\\PDMApp\\\\screenshot_full.ps1\" 2>&1)",
+      "Bash(powershell.exe -Command \"Compress-Archive -Path 'C:\\\\Users\\\\ludoc\\\\Desktop\\\\PDMApp\\\\PDMApp', 'C:\\\\Users\\\\ludoc\\\\Desktop\\\\PDMApp\\\\PDMApp.sln' -DestinationPath 'C:\\\\Users\\\\ludoc\\\\Desktop\\\\exercicio01Grupo05.zip' -Force; Write-Host 'Done'\")",
+      "Bash(powershell.exe -Command \"Stop-Process -Name PDMApp -Force -ErrorAction SilentlyContinue; Start-Sleep -Milliseconds 500; Compress-Archive -Path 'C:\\\\Users\\\\ludoc\\\\Desktop\\\\PDMApp\\\\PDMApp.sln' -DestinationPath 'C:\\\\Users\\\\ludoc\\\\Desktop\\\\exercicio01Grupo05.zip' -Force; Get-ChildItem 'C:\\\\Users\\\\ludoc\\\\Desktop\\\\PDMApp\\\\PDMApp' -Exclude 'bin','obj' | Compress-Archive -DestinationPath 'C:\\\\Users\\\\ludoc\\\\Desktop\\\\exercicio01Grupo05.zip' -Update; Write-Host 'Done'\")",
+      "Bash(powershell.exe -Command \"\\(Get-Item 'C:\\\\Users\\\\ludoc\\\\Desktop\\\\exercicio01Grupo05.zip'\\).Length / 1MB | ForEach-Object { [math]::Round\\(\\\\$_, 2\\) }\")",
+      "Bash(powershell.exe -Command \"Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::OpenRead\\('C:\\\\Users\\\\ludoc\\\\Desktop\\\\exercicio01Grupo05.zip'\\).Entries | Select-Object FullName | Format-Table -AutoSize\")",
+      "Bash(gh auth:*)",
+      "Bash(nlm login:*)"
+    ]
+  }
+}

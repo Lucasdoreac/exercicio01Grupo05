@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercicio01Grupo05.Principal"
+             Title="Exercicio 01">
+    <VerticalStackLayout>
+        <Image
+            Source="imagemexercicio01.png"
+            HeightRequest="185"
+            Aspect="AspectFit" />
+    </VerticalStackLayout>
+</ContentPage>

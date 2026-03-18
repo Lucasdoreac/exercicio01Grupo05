@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.suo
+Backup/
+debug_*.png
+screenshot_*.ps1
+WhatsApp*
+1.jpeg
+imagens/
+exercicio01Grupo05.zip
